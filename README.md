@@ -1,274 +1,344 @@
-# TasteMatch AI
+# 🍽️ TasteMatch AI
 ### Different Tastes. One Great Adventure.
 
-## Inspiration
+**TasteMatch AI** is a cultural discovery application powered by the Qloo API that helps two people discover restaurants and shared experiences based on their individual preferences.
 
-Have you ever spent 30 minutes trying to decide where to eat with a friend, partner, or family member?
+Instead of recommending places for just one person, TasteMatch AI compares two taste profiles, identifies shared interests, and helps users find experiences they can both enjoy.
 
-One person wants Indian food, while the other prefers Italian. One loves quiet, cozy restaurants, while the other wants something lively and adventurous.
+Built for the **Qloo Agentic Hackathon 2026**.
 
-Even something as simple as choosing a restaurant can become surprisingly complicated when two people have different preferences.
+## 🌐 Live Demo
 
-Most recommendation platforms focus on what one person likes. But real-life experiences are often shared.
+**Try TasteMatch AI:** https://taste-match-snowy.vercel.app/
 
-That made me wonder:
+**GitHub Repository:** https://github.com/Mallikarjun-developer/TasteMatch
 
-**What if technology could help two people discover experiences they would both enjoy, instead of forcing one person to compromise?**
+## 💡 The Problem
 
-That question inspired me to build **TasteMatch AI**, a cultural discovery application powered by Qloo.
+Planning an outing with someone who has different interests can be frustrating.
 
-My goal was to make discovering new places more personal, collaborative, and enjoyable.
+One person loves Indian food, while the other prefers Italian. One enjoys quiet cafés, while the other wants lively restaurants.
 
-Rather than treating different preferences as a problem, TasteMatch AI treats them as an opportunity to explore something new together.
+Most recommendation systems focus on individual preferences rather than shared experiences.
 
-## What it does
+**TasteMatch AI aims to make discovering experiences together easier, fairer, and more enjoyable.**
 
-TasteMatch AI helps two people discover restaurants and shared experiences based on their individual cultural preferences.
+## ✨ Features
 
-Instead of simply recommending popular places, the application brings together two taste profiles and helps users understand where their interests overlap.
+### 🧬 Cultural Taste DNA
 
-### 1. Personalized Taste Profiles
+Compare two people's cultural preferences to understand their similarities and differences.
 
-Users begin by entering their individual preferences, including interests such as cuisine, music, movies, and atmosphere.
+TasteMatch AI helps users discover where their interests overlap and where they might enjoy trying something new.
 
-For example, Alex might love Indian cuisine and jazz, while Sam prefers Italian food and pop music.
+### 🍽️ Qloo-Powered Restaurant Discovery
 
-TasteMatch AI considers both profiles when generating recommendations.
+Integrates the Qloo API to retrieve restaurant recommendations.
 
-### 2. Qloo-Powered Restaurant Discovery
+The application combines restaurant information with user preferences to help identify experiences that may appeal to both people.
 
-TasteMatch AI integrates Qloo's cultural intelligence API to retrieve restaurant recommendations.
+### ⚖️ FairMatch Scoring
 
-The application uses this information alongside user preferences to help identify places that may appeal to both people.
+Evaluates recommendations from both users' perspectives.
 
-Instead of searching through endless restaurant listings, users can explore a more focused set of options.
+The goal is to find balanced options instead of prioritizing only one person's preferences.
 
-### 3. Cultural Taste DNA
+### 🤝 Taste Negotiation
 
-Cultural Taste DNA helps users understand how their preferences compare.
+Explore different ways to balance two people's preferences when they disagree.
 
-It highlights shared interests, differences, and opportunities to explore something outside their usual preferences.
+Taste Negotiation encourages collaborative decision-making and helps users discover alternatives.
 
-The goal is to make cultural compatibility easier to understand without reducing someone's personality to a single number.
+### 🗺️ Adventure Planner
 
-### 4. FairMatch Scoring
+Explore outing ideas inspired by the users' shared interests and restaurant recommendations.
 
-TasteMatch AI includes a FairMatch scoring system that evaluates recommendations from the perspective of both users.
+### ❤️ Favorites and Sharing
 
-Instead of optimizing exclusively for one person, the scoring system helps identify options that balance their preferences.
+Save interesting recommendations and share discoveries with others.
 
-This encourages fairer decisions and makes it easier to understand why a particular recommendation might work for both people.
+## 🛠️ Tech Stack
 
-### 5. Taste Negotiation
+| Layer | Technology |
+|---|---|
+| Frontend | React, TypeScript, Vite |
+| Styling | CSS |
+| Backend | Node.js, Express.js |
+| Cultural Intelligence | Qloo API |
+| API Communication | REST |
+| Frontend Hosting | Vercel |
+| Backend Hosting | Render |
+| Version Control | Git, GitHub |
 
-Sometimes two people have very different expectations.
+## 🏗️ System Architecture
 
-Taste Negotiation helps users explore alternative ways to balance their interests.
+```text
+             ┌─────────────────────┐
+             │        Users        │
+             │   Person A and B    │
+             └──────────┬──────────┘
+                        │
+                        ▼
+             ┌─────────────────────┐
+             │   React Frontend    │
+             │   TypeScript/Vite   │
+             │      (Vercel)       │
+             └──────────┬──────────┘
+                        │
+                        ▼
+             ┌─────────────────────┐
+             │   Express Backend   │
+             │      (Render)       │
+             └──────────┬──────────┘
+                        │
+             ┌──────────┴──────────┐
+             ▼                     ▼
+    ┌─────────────────┐   ┌──────────────────┐
+    │    Qloo API     │   │ Taste Comparison │
+    │ Cultural Data   │   │ FairMatch Logic  │
+    └─────────────────┘   └──────────────────┘
+```
 
-Rather than assuming one person's preferences should always win, TasteMatch AI supports a more collaborative approach to choosing experiences.
+### How It Works
 
-### 6. Adventure Planner
+1. Two users enter their cultural preferences.
+2. TasteMatch AI compares their interests.
+3. The backend requests restaurant information from Qloo.
+4. The application evaluates recommendations using its preference-matching logic.
+5. Users explore Cultural Taste DNA, FairMatch scores, and negotiation options.
+6. Users can explore outing ideas and save or share recommendations.
+
+## 📁 Project Structure
+
+```text
+TasteMatch/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── App.tsx
+│   │   ├── App.css
+│   │   └── main.tsx
+│   ├── package.json
+│   └── vite.config.ts
+│
+├── backend/
+│   ├── server.js
+│   └── package.json
+│
+└── README.md
+```
+
+The structure above highlights the main application files; additional configuration files may also be present.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Before running the project locally, install:
 
-TasteMatch AI goes beyond restaurant discovery.
-
-The Adventure Planner helps users explore ideas for shared outings based on their preferences and recommendations.
-
-This turns a simple restaurant search into a more complete discovery experience.
-
-### 7. Favorites and Sharing
-
-Users can save interesting recommendations and share discoveries with others.
-
-This makes it easier to revisit potential experiences and plan something together.
-
-**Ultimately, TasteMatch AI is about helping people connect through cultural discovery, even when their preferences are different.**
-
-## How I built it
-
-I built TasteMatch AI as a full-stack web application, with a React and TypeScript frontend and a Node.js and Express backend.
-
-### Frontend Development
-
-I used React, TypeScript, and Vite to create an interactive, responsive web application.
-
-The frontend allows users to enter preferences, compare cultural interests, explore restaurant recommendations, and interact with the application's discovery features.
-
-I focused on creating a visually engaging interface that makes the experience approachable, even for someone using the application for the first time.
-
-### Backend Development
-
-I developed the backend using Node.js and Express.
-
-The backend handles API requests, communicates with Qloo, and returns restaurant data to the frontend.
-
-Separating the frontend and backend also allows the Qloo API credentials to remain on the server rather than being exposed in browser code.
-
-### Qloo API Integration
-
-Qloo is a central component of TasteMatch AI.
-
-I integrated Qloo's cultural intelligence API to retrieve restaurant recommendations that the application can evaluate against user preferences.
-
-The application combines the returned restaurant information with its own preference-comparison and recommendation logic.
-
-This integration helped transform TasteMatch AI from a basic preference form into a cultural discovery experience.
-
-### FairMatch and Cultural Comparison
-
-I implemented application-level logic to compare two users' preferences and calculate FairMatch scores.
-
-The scoring system is designed to make recommendations more balanced and understandable.
-
-Cultural Taste DNA presents preference similarities and differences in a way that users can explore visually.
-
-### Deployment
-
-I deployed the frontend using Vercel and the backend using Render.
-
-The source code is hosted on GitHub.
-
-This setup allowed me to make TasteMatch AI accessible through a public website, rather than limiting it to a local development environment.
-
-### Technologies Used
-
-- React
-- TypeScript
-- Vite
-- JavaScript
 - Node.js
-- Express.js
-- Qloo API
-- REST APIs
-- Vercel
-- Render
+- npm
 - Git
-- GitHub
-- Visual Studio Code
+- Visual Studio Code (recommended)
+- A Qloo API key
 
-## Challenges I ran into
+### 1. Clone the Repository
 
-### 1. Combining Two Different Taste Profiles
+```bash
+git clone https://github.com/Mallikarjun-developer/TasteMatch.git
+cd TasteMatch
+```
 
-One of the biggest challenges was designing a recommendation experience for two people instead of one.
+### 2. Configure the Backend
 
-When users have different preferences, simply combining their interests does not necessarily produce a fair result.
+Navigate to the backend directory:
 
-I approached this by developing preference-comparison logic and FairMatch scoring to help balance both perspectives.
+```bash
+cd backend
+```
 
-### 2. Integrating the Qloo API
+Install dependencies:
 
-Working with an external cultural intelligence API required understanding its request structure, response data, and how that information could support my application's features.
+```bash
+npm install
+```
 
-I had to connect the backend to Qloo, process restaurant information, and make the results useful within the frontend.
+Create a `.env` file inside the `backend` folder.
 
-### 3. Turning Recommendations Into an Experience
+Add the following environment variables:
 
-I didn't want TasteMatch AI to feel like another restaurant search website.
+```env
+QLOO_API_KEY=your_qloo_api_key_here
+QLOO_BASE_URL=https://hackathon.api.qloo.com
+PORT=3001
+NODE_ENV=development
+```
 
-I wanted users to understand their shared interests, explore differences, and discover new experiences together.
+**Security:** Never commit your actual API key or `.env` file to GitHub.
 
-This led me to develop features such as Cultural Taste DNA, Taste Negotiation, and Adventure Planner.
+Start the backend:
 
-### 4. Connecting the Frontend and Backend
+```bash
+node server.js
+```
 
-Another challenge was making the application work outside my local development environment.
+The backend should run at:
 
-During deployment, I had to configure environment variables, connect the Vercel frontend to the Render backend, and ensure the application could communicate with its APIs.
+```text
+http://localhost:3001
+```
 
-Getting the complete application running through a public website was an important milestone.
+### 3. Configure the Frontend
 
-### 5. Designing a User-Friendly Interface
+Open a second terminal.
 
-TasteMatch AI combines several concepts, including cultural preferences, compatibility, recommendations, and shared planning.
+Navigate to the frontend directory:
 
-Presenting all this information without overwhelming users required careful attention to the interface and user experience.
+```bash
+cd TasteMatch/frontend
+```
 
-I focused on keeping the design colorful, approachable, and easy to navigate.
+If you're already inside the repository's root directory, use:
 
-## Accomplishments that I'm proud of
+```bash
+cd frontend
+```
 
-The accomplishment I'm most proud of is taking TasteMatch AI from an initial idea to a working, publicly deployed application.
+Install dependencies:
 
-I successfully integrated Qloo into a full-stack project and built an experience around two-person cultural discovery.
+```bash
+npm install
+```
 
-I'm especially proud of:
+Create a `.env` file inside `frontend`:
 
-- Building a working Qloo-powered restaurant recommendation experience.
-- Creating Cultural Taste DNA to help users understand shared preferences.
-- Implementing FairMatch scoring to encourage balanced recommendations.
-- Adding Taste Negotiation to support collaborative decisions.
-- Developing Adventure Planner to extend discovery beyond a single recommendation.
-- Building a responsive frontend using React and TypeScript.
-- Deploying the frontend and backend as a publicly accessible application.
+```env
+VITE_API_URL=http://localhost:3001
+```
 
-Most importantly, I built something that addresses a familiar, everyday problem in a different way.
+Start the frontend:
 
-TasteMatch AI demonstrates how cultural intelligence can support not only personalized recommendations but also shared decision-making.
+```bash
+npm run dev
+```
 
-## What I learned
+Open the local URL displayed by Vite, typically:
 
-Building TasteMatch AI taught me a lot about full-stack development, API integration, and designing technology around real human experiences.
+```text
+http://localhost:5173
+```
 
-I gained practical experience connecting a React frontend to an Express backend and integrating an external API into a functioning application.
+## 🔌 API Endpoints
 
-I also learned that recommendation systems become more interesting when they consider multiple perspectives.
+The Express backend exposes the following endpoints:
 
-A recommendation that works perfectly for one person might not work for two people making a decision together.
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/health` | Check backend health |
+| GET | `/api/restaurants?city=New%20York` | Retrieve restaurant recommendations |
+| POST | `/api/match` | Process matching requests |
 
-This project helped me think more carefully about fairness, preference balancing, and explainability in recommendation systems.
+### Example Health Check
 
-I also gained experience deploying a complete application, managing environment variables, troubleshooting API connections, and preparing a project for real users.
+```bash
+curl http://localhost:3001/api/health
+```
 
-One of my biggest takeaways is that useful technology doesn't always need to solve a complicated problem.
+### Example Restaurant Request
 
-Sometimes, making an everyday decision easier, fairer, and more enjoyable can create meaningful value.
+```bash
+curl "http://localhost:3001/api/restaurants?city=New%20York"
+```
 
-## What's next for TasteMatch AI
+## ☁️ Deployment
 
-TasteMatch AI is only the beginning.
+TasteMatch AI uses separate frontend and backend deployments.
 
-In the future, I would like to expand the application into a more intelligent cultural discovery and planning assistant.
+### Frontend — Vercel
 
-### 1. AI-Powered Conversational Planning
+The React application is deployed using Vercel.
 
-I want to introduce a conversational assistant that can understand natural-language requests, ask follow-up questions, and refine recommendations through multiple interactions.
+Production configuration:
 
-For example, users could ask:
+```env
+VITE_API_URL=https://tastematch-ai-backend.onrender.com
+```
 
-"Find something romantic in New York that combines my love for Indian food with my partner's preference for Italian cuisine."
+Build settings:
 
-The assistant could then explore options and help users refine their plans.
+```text
+Framework: Vite
+Root Directory: frontend
+Build Command: npm run build
+Output Directory: dist
+```
 
-### 2. More Cultural Experiences
+### Backend — Render
 
-I plan to expand beyond restaurants into concerts, movies, museums, cafés, and other activities.
+The Express API is deployed using Render.
 
-This would allow users to plan more complete experiences around their shared interests.
+Configuration:
 
-### 3. Multi-Person Taste Matching
+```text
+Root Directory: backend
+Build Command: npm install
+Start Command: node server.js
+```
 
-Currently, TasteMatch AI focuses on two people.
+Backend environment variables:
 
-In the future, I want to support groups of friends, families, and teams.
+```env
+QLOO_API_KEY=your_qloo_api_key_here
+QLOO_BASE_URL=https://hackathon.api.qloo.com
+NODE_ENV=production
+```
 
-The challenge would be finding experiences that balance the preferences of several people fairly.
+Store API credentials securely using Render's environment variable settings.
 
-### 4. Smarter Recommendation Explanations
+## 🔐 Security
 
-I want to improve how TasteMatch AI explains its recommendations.
+TasteMatch AI follows several basic security practices:
 
-Rather than simply displaying a score, the application could provide more detailed explanations of why an experience is a good match.
+- Qloo API credentials are stored on the backend.
+- API keys are configured using environment variables.
+- Frontend requests communicate with the Express API.
+- Sensitive `.env` files should be excluded from version control.
+- Production services use HTTPS.
 
-### 5. Autonomous Planning Agents
+## 🎯 Future Improvements
 
-A longer-term goal is to introduce an AI agent that can plan and refine an outing across multiple steps.
+TasteMatch AI has several opportunities for further development:
 
-Such an agent could use cultural intelligence to discover options, compare preferences, respond to feedback, and revise an itinerary.
+- **Conversational AI assistant:** Allow users to describe their ideal outing in natural language.
+- **Agentic planning:** Introduce an AI agent that can retrieve recommendations, evaluate options, and refine plans through multiple steps.
+- **Group matching:** Support groups of friends and families.
+- **Expanded cultural discovery:** Include movies, concerts, museums, and other experiences.
+- **Improved explanations:** Explain why each recommendation matches both users.
+- **More personalized itineraries:** Create richer plans based on location, time, and preferences.
+- **Persistent user profiles:** Allow users to return to their saved preferences.
 
-### 6. A More Complete Shared Discovery Platform
+## 🏆 Hackathon
 
-My long-term vision is to make TasteMatch AI a platform where people can discover new experiences together, regardless of how different their tastes may be.
+Developed for the **Qloo Agentic Hackathon 2026**.
 
-Because having different interests shouldn't make spending time together harder.
+TasteMatch AI explores how Qloo's cultural intelligence can support shared recommendations and collaborative decision-making.
 
-**Different tastes. One great adventure.**
+The current application focuses on cultural preference matching and discovery. Autonomous agent-based planning is a proposed future enhancement.
+
+## 👨‍💻 Developer
+
+**Mallikarjun Hatti**
+
+GitHub: https://github.com/Mallikarjun-developer
+
+## 📄 License
+
+See the repository's `LICENSE` file for the applicable terms, if a license has been added.
+
+---
+
+### ❤️ TasteMatch AI
+
+**Different Tastes. One Great Adventure.**
+
+Helping people discover experiences together, one match at a time.
