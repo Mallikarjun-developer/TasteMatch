@@ -1,0 +1,1117 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #302644;
+  background: #fbf9ff;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input, select { font: inherit; }
+
+.app {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 5%, #fce9f5 0, transparent 32%),
+    radial-gradient(circle at 85% 12%, #ede4ff 0, transparent 34%),
+    #fbf9ff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 22px max(24px, calc((100vw - 1120px) / 2));
+  border-bottom: 1px solid #eee8f4;
+  background: #ffffffb8;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: Outfit, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #f16b9f, #9664e9);
+  color: white;
+}
+
+.brand-ai { color: #a56aeb; }
+
+.nav-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  border-radius: 999px;
+  color: #8055c4;
+  background: #f3ecff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero {
+  padding: 76px 0 60px;
+  text-align: center;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border: 1px solid #eadcfb;
+  border-radius: 999px;
+  background: white;
+  color: #9361d8;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+h1, h2, h3 { font-family: Outfit, sans-serif; }
+
+.hero h1 {
+  margin: 22px 0 14px;
+  font-size: clamp(42px, 6vw, 70px);
+  line-height: 1.09;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, #e16ba0, #9965ec);
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  max-width: 620px;
+  margin: auto;
+  color: #857b94;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.match-section { padding-bottom: 70px; }
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  margin: 0 0 7px;
+  font-size: 30px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: #897f98;
+}
+
+.profiles {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.person-card {
+  padding: 30px;
+  border: 1px solid #eae1f1;
+  border-radius: 24px;
+  background: white;
+  box-shadow: 0 14px 35px #3e2c5810;
+}
+
+.person-a { border-top: 4px solid #ec77a6; }
+.person-b { border-top: 4px solid #9c70e9; }
+
+.person-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 25px;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 47px;
+  height: 47px;
+  border-radius: 15px;
+  background: #fcebf3;
+  color: #d96a9b;
+}
+
+.person-b .avatar {
+  background: #f0eaff;
+  color: #9164d5;
+}
+
+.eyebrow {
+  color: #a190b2;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.person-header h3 {
+  margin: 3px 0 0;
+  font-size: 21px;
+}
+
+.person-card label {
+  display: block;
+  margin-top: 18px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #5e536e;
+}
+
+.person-card label > svg {
+  vertical-align: -3px;
+  margin-right: 4px;
+}
+
+.person-card input,
+.person-card select {
+  display: block;
+  width: 100%;
+  margin-top: 9px;
+  padding: 13px 14px;
+  border: 1px solid #e7e0ef;
+  border-radius: 11px;
+  background: #fdfcff;
+  color: #3d3051;
+  outline: none;
+}
+
+.person-card input:focus,
+.person-card select:focus,
+.location-panel input:focus {
+  border-color: #ad7cf0;
+  box-shadow: 0 0 0 3px #ad7cf026;
+}
+
+.heart-divider {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 53px;
+  height: 53px;
+  border: 5px solid #fbf9ff;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f178a6, #a16ee9);
+  color: white;
+  z-index: 2;
+}
+
+/* CULTURAL TASTE DNA */
+
+.dna-section {
+  margin-top: 32px;
+  padding: 32px;
+  border: 1px solid #e9dcf5;
+  border-radius: 25px;
+  background: linear-gradient(140deg, #fff, #fcf7ff);
+  box-shadow: 0 12px 40px #3e2c580b;
+}
+
+.dna-title-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 26px;
+}
+
+.dna-icon {
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  flex: 0 0 55px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f178a6, #a16ee9);
+  color: white;
+}
+
+.dna-title-row h2 {
+  margin: 3px 0 4px;
+  font-size: 27px;
+}
+
+.dna-title-row p {
+  margin: 0;
+  color: #8b819a;
+  font-size: 13px;
+}
+
+.dna-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.dna-person {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #f0e6f5;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.dna-a { border-top: 4px solid #ec77a6; }
+.dna-b { border-top: 4px solid #9c70e9; }
+
+.dna-person-heading {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 20px;
+}
+
+.dna-avatar {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #fde8f1;
+  color: #d76798;
+  font-weight: 800;
+}
+
+.dna-b .dna-avatar {
+  background: #efe6ff;
+  color: #9061db;
+}
+
+.dna-person-heading h3 {
+  margin: 3px 0 0;
+  font-size: 19px;
+  overflow-wrap: anywhere;
+}
+
+.dna-taste-list {
+  display: grid;
+  gap: 13px;
+}
+
+.dna-taste-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #f3edf7;
+  font-size: 13px;
+}
+
+.dna-taste-row:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.dna-taste-row span { color: #8b819a; }
+
+.dna-taste-row strong {
+  text-align: right;
+  color: #493a5f;
+  overflow-wrap: anywhere;
+}
+
+.dna-insights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.dna-insight {
+  padding: 20px;
+  border-radius: 17px;
+}
+
+.dna-shared {
+  background: #f0fbf6;
+  border: 1px solid #d8f0e4;
+}
+
+.dna-different {
+  background: #f5efff;
+  border: 1px solid #e7dafa;
+}
+
+.dna-insight h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+
+.dna-shared h3 { color: #287d5e; }
+.dna-different h3 { color: #8155bd; }
+
+.dna-insight p,
+.dna-insight li {
+  color: #665a74;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.dna-insight p { margin: 0; }
+.dna-insight ul { margin: 0; padding-left: 18px; }
+.dna-insight li + li { margin-top: 7px; }
+
+.dna-footnote {
+  margin: 18px 0 0;
+  color: #968aa5;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* LOCATION */
+
+.location-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  margin-top: 28px;
+  padding: 26px 30px;
+  background: white;
+  border: 1px solid #eae1f1;
+  border-radius: 20px;
+}
+
+.location-panel h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+.location-panel h3 svg { color: #a16be8; }
+
+.location-panel p {
+  margin: 0;
+  color: #8b819a;
+  font-size: 13px;
+}
+
+.location-panel input {
+  width: min(300px, 100%);
+  padding: 14px 16px;
+  border: 1px solid #e7e0ef;
+  border-radius: 12px;
+  outline: none;
+}
+
+.match-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 22px;
+  padding: 19px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(100deg, #ec70a0, #9a69eb);
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 12px 30px #a56ad944;
+}
+
+.match-button:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+.match-button:disabled {
+  opacity: .65;
+  cursor: wait;
+}
+
+.result-message {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 18px 20px;
+  border: 1px solid #e9dcfb;
+  border-radius: 14px;
+  background: #f5efff;
+  color: #7650ae;
+}
+
+.result-message p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+/* RECOMMENDATIONS */
+
+.recommendations { margin-top: 65px; }
+
+.recommendation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.recommendation-card {
+  overflow: hidden;
+  border: 1px solid #eee7f6;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 12px 35px #32284b12;
+}
+
+.restaurant-image {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.restaurant-placeholder {
+  display: grid;
+  place-items: center;
+  background: #f5efff;
+  color: #9968ec;
+}
+
+.recommendation-content { padding: 25px; }
+
+.rank-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #a16be8;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.recommendation-content h3 {
+  margin: 10px 0;
+  font-size: 23px;
+}
+
+.restaurant-address {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #8c839e;
+  font-size: 13px;
+}
+
+.restaurant-cuisine {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #9968ec;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.recommendation-content > p { line-height: 1.6; }
+
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 10px;
+}
+
+.score-row strong:first-child {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.score-bar {
+  height: 10px;
+  border-radius: 10px;
+  background: #f0eaff;
+  overflow: hidden;
+}
+
+.score-bar > div {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ef70a5, #9968ec);
+}
+
+.individual-scores {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 14px;
+  color: #786a8e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.match-explanation {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #f5efff;
+  color: #7753b6;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.match-explanation svg { vertical-align: -3px; }
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.tag-list span {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #faf1f7;
+  color: #a65a86;
+  font-size: 11px;
+}
+
+.scoring-disclaimer {
+  margin-top: 24px;
+  text-align: center;
+  color: #8c839e;
+  font-size: 12px;
+}
+
+/* TASTE NEGOTIATION */
+
+.negotiation-panel {
+  background: linear-gradient(135deg, #fff5fb, #f5efff);
+  border: 1px solid #eadcf9;
+  border-radius: 24px;
+  padding: 28px;
+  margin: 30px 0;
+}
+
+.negotiation-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: #8254c7;
+}
+
+.negotiation-heading h3 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.negotiation-heading p {
+  margin: 0;
+  color: #82758f;
+  line-height: 1.5;
+}
+
+.negotiation-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.negotiation-options button {
+  border: 1px solid #e4d7f3;
+  border-radius: 14px;
+  padding: 13px 18px;
+  background: white;
+  color: #785c9b;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+.negotiation-options button:hover {
+  transform: translateY(-2px);
+}
+
+.negotiation-options button.active {
+  background: linear-gradient(135deg, #ef70a5, #9968ec);
+  color: white;
+  border-color: transparent;
+}
+
+.negotiation-insight {
+  margin: 22px 0 0;
+  padding: 16px;
+  background: #ffffffb8;
+  border-radius: 12px;
+  color: #6d5b81;
+  line-height: 1.6;
+}
+
+.negotiation-note {
+  margin: 12px 0 0;
+  color: #8b7b9a;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ADVENTURE PLANNER */
+
+.adventure-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 13px;
+  padding: 14px 18px;
+  background: linear-gradient(110deg, #ed6eab, #9267ec);
+  color: #fff;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.adventure-button:hover { filter: brightness(1.05); }
+
+.adventure-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(29, 20, 47, .65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.adventure-modal {
+  position: relative;
+  width: min(650px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 26px;
+  padding: 32px;
+  box-shadow: 0 30px 90px #1c153850;
+}
+
+.adventure-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: #f5efff;
+  color: #7755a8;
+  cursor: pointer;
+}
+
+.adventure-modal h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 45px 10px 0;
+  color: #29203f;
+  font-size: 29px;
+}
+
+.adventure-intro {
+  color: #736683;
+  line-height: 1.6;
+}
+
+.adventure-timeline {
+  margin: 24px 0;
+  border-left: 3px solid #eadcf9;
+  padding-left: 20px;
+}
+
+.adventure-step {
+  position: relative;
+  margin: 0 0 24px;
+}
+
+.adventure-step::before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 4px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #bd75e5;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #eadcf9;
+}
+
+.adventure-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 750;
+  color: #995ad0;
+}
+
+.adventure-step h3 {
+  margin: 7px 0 5px;
+  color: #29203f;
+}
+
+.adventure-step p {
+  margin: 0;
+  color: #766d83;
+  line-height: 1.6;
+}
+
+.adventure-disclaimer {
+  background: #f7f1ff;
+  color: #705e88;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.adventure-done {
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+  padding: 14px;
+  background: #302347;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 28px 0 38px;
+  border-top: 1px solid #eee8f4;
+  color: #9487a3;
+  font-size: 12px;
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+  .navbar { padding: 16px 20px; }
+  .brand { font-size: 20px; }
+  .nav-badge { font-size: 10px; padding: 8px 10px; }
+  .hero { padding: 58px 0 40px; }
+  .hero h1 { letter-spacing: -1px; }
+
+  .profiles,
+  .recommendation-grid,
+  .dna-grid,
+  .dna-insights {
+    grid-template-columns: 1fr;
+  }
+
+  .heart-divider { top: 50%; }
+  .person-card { padding: 23px; }
+
+  .location-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .location-panel input { width: 100%; }
+  .dna-section { padding: 22px; }
+  .individual-scores { flex-wrap: wrap; }
+  .negotiation-panel { padding: 20px; }
+  .negotiation-options button { flex: 1 1 100%; }
+}
+
+@media (max-width: 600px) {
+  .adventure-modal { padding: 24px 18px; }
+  .adventure-modal h2 { font-size: 23px; }
+}
+
+/* ============================================
+   PHASE 5 — SHARE YOUR MATCH
+============================================ */
+
+/* Restaurant action buttons */
+
+.restaurant-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.restaurant-actions .adventure-button {
+  margin-top: 0;
+}
+
+.favorite-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  width: 100%;
+  padding: 13px 16px;
+
+  border: 1px solid #e8d8f5;
+  border-radius: 13px;
+
+  background: white;
+  color: #8657bd;
+
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.favorite-button:hover {
+  background: #f8f0ff;
+}
+
+.favorite-button.saved {
+  background: #fff0f7;
+  border-color: #f3bdd7;
+  color: #d45e95;
+}
+
+/* Saved favorites */
+
+.favorites-section {
+  margin-top: 70px;
+}
+
+.favorites-section .section-heading h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Restaurant summary in adventure modal */
+
+.adventure-restaurant {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 18px;
+  margin-top: 20px;
+
+  border: 1px solid #eadcf9;
+  border-radius: 15px;
+
+  background: #f8f2ff;
+  color: #7d51b7;
+}
+
+.adventure-restaurant strong {
+  font-size: 17px;
+}
+
+.adventure-restaurant p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #8b7c9d;
+}
+
+/* Share buttons */
+
+.share-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  margin: 24px 0 15px;
+}
+
+.share-actions button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+
+  padding: 14px 12px;
+
+  border: 1px solid #e6d9f4;
+  border-radius: 13px;
+
+  background: #f8f3ff;
+  color: #8054bd;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.share-actions button:hover {
+  background: #efe3ff;
+  transform: translateY(-2px);
+}
+
+/* Sharing feedback */
+
+.share-message {
+  padding: 12px 15px;
+
+  border-radius: 12px;
+
+  background: #eefbf4;
+  color: #267d57;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .share-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   PRINT / SAVE AS PDF
+============================================ */
+
+@media print {
+  @page {
+    size: A4;
+    margin: 18mm;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .adventure-modal,
+  .adventure-modal * {
+    visibility: visible !important;
+  }
+
+  .adventure-backdrop {
+    position: static !important;
+    display: block !important;
+    background: white !important;
+    padding: 0 !important;
+  }
+
+  .adventure-modal {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+
+    width: 100% !important;
+    max-height: none !important;
+
+    overflow: visible !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .adventure-step {
+    break-inside: avoid;
+  }
+
+  .adventure-modal h2 {
+    color: #302644 !important;
+  }
+}
+
+/* Responsive improvements */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .profiles,
+  .dna-grid,
+  .dna-insights,
+  .recommendation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .location-panel input {
+    width: 100%;
+  }
+
+  .share-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .adventure-modal {
+    width: 100%;
+    max-width: 100%;
+  }
+}
